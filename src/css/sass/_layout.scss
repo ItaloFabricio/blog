@@ -3,7 +3,7 @@ header{
     
     margin: 0 auto;
 
-    padding: 0.8rem 2.4rem;
+    padding: 8px 24px;
 }
 
 a{
@@ -13,6 +13,7 @@ a{
 
 .flex{
     display: flex;
+    align-items: center;
 }
 
 .flex-space-between{
@@ -36,14 +37,14 @@ a{
     display: flex;
 
     li{
-        margin-left: 2.4rem;
+        margin-left: 24px;
     }
 }
 
 .nav-link{
     display: inline-block;
 
-    padding: 0.8rem;
+    padding: 8px;
 
     transition: .5s ease;
 
@@ -63,4 +64,15 @@ a{
 
     color: $white-light;
     padding: 8px;
+}
+
+.img-profile{
+    width: 56px;
+    height: 56px;
+    background-color: $gray-2;
+    border-radius: 50%;
+}
+
+.container-posts{
+    display: flex;
 }

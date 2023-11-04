@@ -1,11 +1,16 @@
 import Post from '../Post';
 
 const Article = () => {
+
+
     return(
-        <>       
-            <h1>Article</h1>
-            <Post></Post>
-        </>
+       <section className='container border'>
+            <h3>Article</h3>
+            <div className='mt-5 container-posts'>
+            <Post>
+            </Post>
+            </div>
+       </section>
     );     
 }
 

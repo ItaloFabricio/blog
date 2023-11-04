@@ -13,8 +13,46 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
 }
 
+h1 {
+  font-size: 64px;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 36px;
+  font-weight: 300;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+h5 {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #4DDCFF;
+  font-weight: 300;
+}
+
+h6 {
+  font-size: 16px;
+  font-weight: 300;
+}
+
 p, li {
   font-family: "Poppins", sans-serif;
+}
+
+p {
+  font-size: 16px;
+  color: #6D6E70;
 }
 
 .s-0 {
@@ -630,7 +668,7 @@ body {
 header {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0.8rem 2.4rem;
+  padding: 8px 24px;
 }
 
 a {
@@ -640,6 +678,7 @@ a {
 
 .flex {
   display: flex;
+  align-items: center;
 }
 
 .flex-space-between {
@@ -662,12 +701,12 @@ a {
   display: flex;
 }
 .menu li {
-  margin-left: 2.4rem;
+  margin-left: 24px;
 }
 
 .nav-link {
   display: inline-block;
-  padding: 0.8rem;
+  padding: 8px;
   transition: 0.5s ease;
 }
 .nav-link:hover {
@@ -682,4 +721,15 @@ a {
   border-radius: 4px;
   color: #FAFCFC;
   padding: 8px;
+}
+
+.img-profile {
+  width: 56px;
+  height: 56px;
+  background-color: #4E4E50;
+  border-radius: 50%;
+}
+
+.container-posts {
+  display: flex;
 }
