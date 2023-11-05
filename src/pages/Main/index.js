@@ -2,6 +2,7 @@ import api from '../../services/api';
 import Post from '../../components/Post'
 import { useState, useEffect } from 'react';
 
+
 const Main = () => {
 
     const [post, setPost] = useState([]);
@@ -24,6 +25,7 @@ const Main = () => {
                             return (
                                 <>
                                     <Post key={post.id} 
+                                    id={post.id}
                                     subtitle={post.category} 
                                     title={post.title} 
                                     author={post.author}
