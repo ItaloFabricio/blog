@@ -23,7 +23,9 @@ const Paths = () => {
                     <Route path="/about" element={<About></About>}></Route>
                     <Route path="/login" element={<Login></Login>}></Route>
                     <Route path="/profile" element={<Profile></Profile>}></Route>
-                    <Route path="/post" element={<Post></Post>}></Route>
+                    
+                    <Route path="/post/:idPost" element={<Post></Post>}></Route>
+                    
                     <Route path="/search" element={<Search></Search>}></Route>
 
                     <Route path="*" element={<NotFound></NotFound>}></Route>

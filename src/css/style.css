@@ -471,8 +471,12 @@
 
 .profile-big {
   width: 128px;
-  height: 128px;
+  height: 100%;
+  display: flex;
   border-radius: 50%;
+  border: 2px solid #1B69D2;
+  overflow: hidden;
+  object-fit: cover;
 }
 
 .profile-img {

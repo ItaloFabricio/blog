@@ -5,6 +5,9 @@ import Footer from "pages/Footer";
 //Images
 import Logo from "../../../svg/blog-logo2.svg"
 
+//Link
+import { Link } from "react-router-dom";
+
 const NotFound = () => {
 
     return(
@@ -28,7 +31,7 @@ const NotFound = () => {
                             para o site.
                         </p>
 
-                        <a href="" className="btn w-100 mt-3">Voltar p/ home</a>
+                        <Link to="/" className="btn w-100 mt-3">Voltar p/ home</Link>
                     </div>
                     <div className="grid-4 disappear"></div>
                 </div>
