@@ -1,3 +1,7 @@
+//Header e Footer
+import Header from "pages/Header";
+import Footer from "pages/Footer";
+
 
 //Components
 import Hero from "./Hero";
@@ -48,6 +52,8 @@ const Home = () => {
 
     return(
         <>
+            <Header></Header>
+
             <Hero></Hero>
 
             <section className="container">
@@ -99,6 +105,9 @@ const Home = () => {
                     return <Banner key={item.id} content={item}></Banner>
                 })
             }
+
+            <Footer></Footer>
+
         </>
     );
 }
