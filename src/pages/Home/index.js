@@ -38,7 +38,7 @@ const Home = () => {
         })
 
         //Requisição para posts mais vistos
-        api.get('/posts?_limit=1&order=desc')
+        api.get('/posts?_limit=3&order=desc')
         .then((r) => {
             setMostseen(r.data);
         })
@@ -82,15 +82,23 @@ const Home = () => {
                     <div className="row">
 
 
-                        <Card></Card>
+                        {
+                            mostseen.map((item) => {
+                                return <Card key={item.id} content={item}></Card>
+                            })
+                        }
                         
 
                     </div>
                 </section>
             </div>
 
-
-            <Banner></Banner>
+                    
+            {
+                banner.map((item) => {
+                    return <Banner key={item.id} content={item}></Banner>
+                })
+            }
         </>
     );
 }
