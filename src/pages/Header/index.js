@@ -3,7 +3,32 @@ import Logo from '../../svg/blog-logo.svg';
 //Link
 import { Link } from 'react-router-dom';
 
+//Hooks
+import { useState } from 'react';
+
 const Header = () => {
+
+    const initialValueForm = {
+        search: ''
+    }
+
+    //Variaveis de estado
+    const [form, setForm] = useState ([initialValueForm]);
+
+    function onChange(event){
+
+        const {value, name} = event.target;
+
+        setForm({...form, [name]: value});
+
+        console.log(form);
+
+    }
+
+    function handleSearch(e){
+        e.preventDefault();
+    }
+
     return(
         <>
             <header className="py-1 px-2">
@@ -19,8 +44,8 @@ const Header = () => {
                 <div className='bx'></div>
                 <div className='flex-start-row'>
                         <div className='search'>
-                            <form className='flex'>
-                                <input type='text' name='search' placeholder="Buscar..."></input>
+                            <form className='flex' onSubmit={handleSearch}>
+                                <input type='text' name='search' placeholder="Buscar..." onChange={onChange}></input>
                                 <button className="btn-search"></button>
                             </form>
                         </div>
