@@ -1,7 +1,7 @@
 import Logo from '../../svg/blog-logo.svg';
 
 //Link
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 //Hooks
 import { useState } from 'react';
@@ -15,10 +15,15 @@ const Header = () => {
     //Variaveis de estado
     const [form, setForm] = useState ([initialValueForm]);
 
+    //useNavigate para redirecionar
+    const navigate = useNavigate();
+
     function onChange(event){
 
+        // Desestruturação do nome e valor da propriedade do input do campo
         const {value, name} = event.target;
 
+        //Pegando o valor antigo e adicionando o caracter novo
         setForm({...form, [name]: value});
 
         console.log(form);
@@ -27,6 +32,9 @@ const Header = () => {
 
     function handleSearch(e){
         e.preventDefault();
+
+        navigate(`/search/${form.search}`);
+
     }
 
     return(
